@@ -1,10 +1,9 @@
 package hello.firstassignment.item.controller.req;
 
-public record ItemCreateReqDto(
+public record ItemUpdateReqDto(
         String username,
         String title,
         String content,
         int price
 ) {
-
 }

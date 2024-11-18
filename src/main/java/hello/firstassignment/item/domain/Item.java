@@ -1,5 +1,6 @@
 package hello.firstassignment.item.domain;
 
+import hello.firstassignment.item.controller.req.ItemUpdateReqDto;
 import java.time.LocalDateTime;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -18,4 +19,5 @@ public class Item {
     private String username;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
+
 }
