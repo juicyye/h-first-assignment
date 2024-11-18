@@ -36,6 +36,7 @@ public class ItemEntity {
 
     public static ItemEntity fromDomain(Item item) {
         return ItemEntity.builder()
+                .id(item.getId())
                 .title(item.getTitle())
                 .content(item.getContent())
                 .price(item.getPrice())
