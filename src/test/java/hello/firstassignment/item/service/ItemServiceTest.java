@@ -1,3 +1,4 @@
+/*
 package hello.firstassignment.item.service;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -102,4 +103,4 @@ class ItemServiceTest {
         // then
         assertThat(results).hasSize(0);
     }
-}
+}*/

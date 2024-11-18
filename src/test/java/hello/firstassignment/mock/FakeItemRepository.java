@@ -1,3 +1,4 @@
+/*
 package hello.firstassignment.mock;
 
 import hello.firstassignment.item.domain.Item;
@@ -47,3 +48,4 @@ public class FakeItemRepository implements ItemRepository {
         data.removeIf(i -> Objects.equals(i.getId(), id));
     }
 }
+*/

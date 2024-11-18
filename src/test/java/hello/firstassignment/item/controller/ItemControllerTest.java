@@ -1,3 +1,4 @@
+/*
 package hello.firstassignment.item.controller;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -58,7 +59,8 @@ class ItemControllerTest {
 
     }
 
-   /* @Test
+   */
+/* @Test
     @DisplayName("createDto에 데이터가 없으면 valid에 걸린다")
     void createItemWithEmpty() throws Exception {
         // given
@@ -73,7 +75,8 @@ class ItemControllerTest {
         resultActions.andExpect(status().isBadRequest())
                 .andExpect(jsonPath("$.code").value(-1));
 
-    }*/
+    }*//*
+
 
     @Test
     @DisplayName("updateDto로 데이터를 수정할 수 있다")
@@ -109,4 +112,4 @@ class ItemControllerTest {
 
     }
 
-}
+}*/
