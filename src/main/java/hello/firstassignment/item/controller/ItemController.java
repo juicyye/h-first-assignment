@@ -11,7 +11,6 @@ import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -26,7 +25,7 @@ public class ItemController {
     private final ItemService itemService;
 
     @PostMapping("/post")
-    public ResponseEntity<?> createItem(@Valid @RequestBody ItemCreateReqDto createReqDto, BindingResult bindingResult) {
+    public ResponseEntity<?> createItem(@Valid @RequestBody ItemCreateReqDto createReqDto) {
         Item savedItem = itemService.create(createReqDto);
         return new ResponseEntity<>(ItemCreateRespDto.from(savedItem), HttpStatus.CREATED);
     }
