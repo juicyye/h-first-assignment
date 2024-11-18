@@ -29,7 +29,8 @@ public class ItemService {
     public Item updateItemById(Long id, ItemUpdateReqDto updateReqDto) {
         Item item = itemRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException(ErrorMessage.NOT_FOUND_ITEM.getMessage()));
-        return itemRepository.save(mapper.update(updateReqDto, item));
+        item.update(updateReqDto);
+        return itemRepository.save(item);
     }
 
     public void deleteItemById(Long id) {

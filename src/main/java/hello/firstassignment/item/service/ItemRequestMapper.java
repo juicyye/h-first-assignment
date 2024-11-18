@@ -24,15 +24,5 @@ public class ItemRequestMapper {
                 .build();
     }
 
-    public Item update(ItemUpdateReqDto updateReqDto, Item item) {
-        return Item.builder()
-                .id(item.getId())
-                .title(updateReqDto.title())
-                .content(updateReqDto.content())
-                .username(updateReqDto.username())
-                .price(updateReqDto.price())
-                .createdAt(item.getCreatedAt())
-                .updatedAt(localDateTimeHolder.now())
-                .build();
-    }
+
 }

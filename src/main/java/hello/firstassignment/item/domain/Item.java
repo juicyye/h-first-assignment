@@ -20,4 +20,12 @@ public class Item {
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
+    public void update(ItemUpdateReqDto updateReqDto) {
+        this.title = updateReqDto.title();
+        this.content = updateReqDto.content();
+        this.price = updateReqDto.price();
+        this.username = updateReqDto.username();
+        this.updatedAt = LocalDateTime.now();
+    }
+
 }

@@ -10,5 +10,7 @@ public interface ItemRepository {
     Optional<Item> findById(Long id);
     void deleteById(Long id);
 
+    Optional<Item> update(Item item);
+
 
 }
