@@ -26,7 +26,7 @@ public class ItemController {
     private final ItemService itemService;
 
     @PostMapping("/post")
-    public ResponseEntity<?> createItem(@Valid @RequestBody ItemCreateReqDto createReqDto, BindingResult bindingResult) {
+    public ResponseEntity<?> createItem(@Valid @RequestBody ItemCreateReqDto createReqDto) {
         Item savedItem = itemService.create(createReqDto);
         return new ResponseEntity<>(ItemCreateRespDto.from(savedItem), HttpStatus.CREATED);
     }
