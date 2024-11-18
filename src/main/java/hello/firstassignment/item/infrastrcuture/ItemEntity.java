@@ -53,6 +53,8 @@ public class ItemEntity {
                 .content(content)
                 .price(price)
                 .username(username)
+                .createdAt(createdAt)
+                .updatedAt(updatedAt)
                 .build();
     }
 }

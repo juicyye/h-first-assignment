@@ -31,6 +31,7 @@ public class ItemRequestMapper {
                 .content(updateReqDto.content())
                 .username(updateReqDto.username())
                 .price(updateReqDto.price())
+                .createdAt(item.getCreatedAt())
                 .updatedAt(localDateTimeHolder.now())
                 .build();
     }

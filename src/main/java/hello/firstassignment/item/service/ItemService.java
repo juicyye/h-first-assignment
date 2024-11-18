@@ -7,6 +7,7 @@ import hello.firstassignment.item.domain.Item;
 import hello.firstassignment.item.service.port.ItemRepository;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -32,7 +33,11 @@ public class ItemService {
     }
 
     public void deleteItemById(Long id) {
-        itemRepository.deleteById(id);
+        try{
+            itemRepository.deleteById(id);
+        } catch (EmptyResultDataAccessException e) {
+            throw new IllegalArgumentException(ErrorMessage.NOT_FOUND_ITEM.getMessage(), e);
+        }
     }
 
 
